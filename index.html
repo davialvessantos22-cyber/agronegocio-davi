@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SustentAgro – Educação em Sustentabilidade e Agricultura</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">🌱</span>
+        <span class="logo-text">Sustent<strong>Agro</strong></span>
+      </div>
+      <p class="tagline">Conhecimento que nutre o futuro do campo</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SEÇÃO HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <h1>Agricultura sustentável começa com informação</h1>
+        <p class="hero-sub">
+          Explore os princípios que protegem o solo, a água e o clima —
+          e descubra o quanto você já sabe com nosso quiz educativo.
+        </p>
+        <a href="#quiz" class="btn-primary">Iniciar o quiz</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="field-art">
+          <div class="sun"></div>
+          <div class="clouds">
+            <div class="cloud c1"></div>
+            <div class="cloud c2"></div>
+          </div>
+          <div class="plants">
+            <div class="plant p1"><div class="stem"></div><div class="leaf l1"></div><div class="leaf l2"></div></div>
+            <div class="plant p2"><div class="stem"></div><div class="leaf l1"></div><div class="leaf l2"></div></div>
+            <div class="plant p3"><div class="stem"></div><div class="leaf l1"></div><div class="leaf l2"></div></div>
+            <div class="plant p4"><div class="stem"></div><div class="leaf l1"></div><div class="leaf l2"></div></div>
+            <div class="plant p5"><div class="stem"></div><div class="leaf l1"></div><div class="leaf l2"></div></div>
+          </div>
+          <div class="ground"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO QUIZ -->
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-container">
+
+        <!-- Tela inicial do quiz -->
+        <div id="quiz-intro" class="quiz-card quiz-intro-card">
+          <h2>Teste seus conhecimentos 🌿</h2>
+          <p>
+            Este quiz tem <strong>8 perguntas</strong> sobre sustentabilidade,
+            agricultura orgânica, manejo de recursos naturais e energia limpa.
+            Cada pergunta tem 4 alternativas e você recebe feedback imediato.
+          </p>
+          <div class="seeds-preview" aria-hidden="true">
+            <span class="seed" title="Semente 1">🌱</span>
+            <span class="seed" title="Semente 2">🌱</span>
+            <span class="seed" title="Semente 3">🌱</span>
+            <span class="seed" title="Semente 4">🌱</span>
+            <span class="seed" title="Semente 5">🌱</span>
+            <span class="seed" title="Semente 6">🌱</span>
+            <span class="seed" title="Semente 7">🌱</span>
+            <span class="seed" title="Semente 8">🌱</span>
+          </div>
+          <button class="btn-primary" id="btn-start">Começar agora</button>
+        </div>
+
+        <!-- Tela de questão -->
+        <div id="quiz-question" class="quiz-card" style="display:none;">
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="progress-label">
+            <span id="progress-text">Pergunta 1 de 8</span>
+            <span id="seeds-row" aria-label="Sementes conquistadas"></span>
+          </div>
+          <h2 id="question-text" class="question-text"></h2>
+          <ul class="options-list" id="options-list"></ul>
+          <div id="feedback-box" class="feedback-box" style="display:none;">
+            <p id="feedback-text"></p>
+            <p id="explanation-text" class="explanation"></p>
+            <button class="btn-secondary" id="btn-next">Próxima pergunta →</button>
+          </div>
+        </div>
+
+        <!-- Tela de resultado -->
+        <div id="quiz-result" class="quiz-card" style="display:none;">
+          <div id="result-badge" class="result-badge" aria-hidden="true"></div>
+          <h2 id="result-title" class="result-title"></h2>
+          <p id="result-score" class="result-score"></p>
+          <p id="result-message" class="result-message"></p>
+          <button class="btn-primary" id="btn-restart">Refazer o quiz</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO EDUCATIVA -->
+    <section class="edu-section" id="saiba-mais">
+      <div class="edu-inner">
+        <h2 class="section-title">Boas práticas para uma agricultura sustentável</h2>
+        <p class="section-sub">Conhecimento aplicado transforma o campo e preserva o planeta.</p>
+
+        <div class="edu-grid">
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">💧</div>
+            <h3>Manejo eficiente da água</h3>
+            <p>
+              A irrigação corresponde a cerca de 70% do consumo global de água doce.
+              Técnicas como irrigação por gotejamento, captação de água da chuva e
+              monitoramento da umidade do solo reduzem o desperdício em até 50%,
+              garantindo mais produtividade com menos recurso.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">🌿</div>
+            <h3>Agricultura orgânica</h3>
+            <p>
+              A produção orgânica evita pesticidas sintéticos e fertilizantes químicos,
+              favorecendo a biodiversidade e a saúde do solo. O uso de compostagem,
+              adubação verde e controle biológico de pragas são pilares que aumentam
+              a resiliência das lavouras a longo prazo.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">🪱</div>
+            <h3>Preservação e saúde do solo</h3>
+            <p>
+              O solo é um ecossistema vivo. O plantio direto, a rotação de culturas e
+              a manutenção de cobertura vegetal evitam a erosão, retêm carbono e
+              preservam a fauna do solo — como minhocas e microrganismos —,
+              elementos fundamentais para a fertilidade natural.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">☀️</div>
+            <h3>Energia limpa no campo</h3>
+            <p>
+              A energia solar fotovoltaica e o biogás proveniente de resíduos orgânicos
+              são alternativas viáveis para reduzir a dependência de combustíveis
+              fósseis na agricultura. Além de diminuir emissões de CO₂, podem gerar
+              economia significativa para o produtor rural.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">🌳</div>
+            <h3>Agrofloresta e biodiversidade</h3>
+            <p>
+              Sistemas agroflorestais integram árvores, cultivos e, às vezes, animais
+              no mesmo espaço. Eles imitam a floresta natural, diversificam a renda,
+              protegem nascentes, sequestram carbono e promovem corredores ecológicos
+              para a fauna silvestre.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">♻️</div>
+            <h3>Redução de resíduos agropecuários</h3>
+            <p>
+              Embalagens de agroquímicos, restos de colheita e dejetos animais podem
+              ser transformados em recursos. A compostagem, a digestão anaeróbica e
+              a devolução correta de embalagens vazias fecham ciclos e evitam a
+              contaminação do solo e da água.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="logo-text small">Sustent<strong>Agro</strong></span>
+      <p>Conteúdo educativo e informativo sobre sustentabilidade na agricultura.</p>
+      <p class="footer-note">Nenhum produto, serviço ou curso é comercializado neste site.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
